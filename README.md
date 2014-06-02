@@ -21,5 +21,5 @@
 ### Usage
 
 ```
-docker run -i -t dockerize/elasticsearch bash
+docker run -p 9200:9200 -p 9300:9300 dockerize/elasticsearch
 ```
