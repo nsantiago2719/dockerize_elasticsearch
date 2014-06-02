@@ -1,4 +1,4 @@
-## Ubuntu Dockerfile
+## ElasticSearch Dockerfile
 
 [Docker](https://www.docker.io/) [ElasticSearch](http://http://www.elasticsearch.org/) [Dockerfile](https://www.docker.io/learn/dockerfile/).  Also published to public [Docker Registry](https://index.docker.io/).
 
