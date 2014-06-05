@@ -5,7 +5,7 @@
 #
 
 # Pull base image
-FROM dockerize/java
+FROM dockerize/java:1.7
 
 MAINTAINER Dockerize "http://dockerize.github.io"
 
