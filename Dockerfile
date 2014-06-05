@@ -10,8 +10,9 @@ FROM dockerize/java:1.7
 MAINTAINER Dockerize "http://dockerize.github.io"
 
 # Install ElasticSearch
-ENV VERSION 1.2.0
-ENV FILE elasticsearch-${VERSION}.tar.gz
+ENV VERSION 1.2.1
+ENV FILE elasticsearch-$VERSION.tar.gz
+
 RUN wget -O /tmp/$FILE https://download.elasticsearch.org/elasticsearch/elasticsearch/$FILE
 RUN tar -xzf /tmp/$FILE -C /tmp
 RUN mv /tmp/elasticsearch-$VERSION /elasticsearch
