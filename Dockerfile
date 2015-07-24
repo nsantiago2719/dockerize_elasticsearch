@@ -5,12 +5,12 @@
 #
 
 # Pull base image
-FROM dockerize/java:1.7
+FROM dockerize/java:1.8
 
 MAINTAINER Dockerize "http://dockerize.github.io"
 
 # Install ElasticSearch
-ENV VERSION 1.4.2
+ENV VERSION 1.7.0
 ENV FILE elasticsearch-$VERSION.tar.gz
 
 RUN wget -O /tmp/$FILE https://download.elasticsearch.org/elasticsearch/elasticsearch/$FILE
@@ -20,6 +20,7 @@ RUN mv /tmp/elasticsearch-$VERSION /elasticsearch
 # Install plugins
 RUN /elasticsearch/bin/plugin -install royrusso/elasticsearch-HQ
 RUN /elasticsearch/bin/plugin -install mobz/elasticsearch-head
+RUN /elasticsearch/bin/plugin -install lmenezes/elasticsearch-kopf/master
 RUN /elasticsearch/bin/plugin -install elasticsearch/elasticsearch-cloud-aws/2.1.1
 
 # Mountable directory
